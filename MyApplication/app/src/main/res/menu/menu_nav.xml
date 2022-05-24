@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Menu"
+        android:id="@+id/menu"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="Transaksi"
+        android:id="@+id/transaksi"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="Log Aktifitas"
+        android:id="@+id/log_aktifitas"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="Logout"
+        android:id="@+id/logout"
+        app:showAsAction="never"
+        />
+</menu>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="17dp"
+    tools:context=".Transaksi.DetailTransaksi">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textStyle="bold"
+            android:text="Filter Berdasarkan"
+            android:id="@+id/text_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_filter"
+            android:id="@+id/filter_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Search"
+                android:tag="Search"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:onClick="FilterData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="Hari"
+                android:tag="Hari"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:onClick="FilterData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="Bulan"
+                android:tag="Bulan"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:onClick="FilterData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/costum_tanggal"
+            app:layout_constraintTop_toBottomOf="@+id/filter_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Costum Tanggal"
+            android:tag="Costum"
+            android:textAllCaps="false"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:onClick="FilterData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <SearchView
+            android:id="@+id/search_key"
+            android:layout_width="match_parent"
+            app:queryBackground="@android:color/transparent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:background="#A9A9A9"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@+id/costum_tanggal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:queryHint="Cari Buku Anda"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/parent_menu"
+            app:layout_constraintTop_toBottomOf="@+id/search_key"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            app:spanCount="10"
+            tools:listitem="@layout/card_lihat_menu"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
